@@ -1,0 +1,36 @@
+User表
+create table if not exists user(
+    id int not null unsigned auto_increment comment '用户id',
+    name varchar(10) not null comment '用户名',
+    primary key (id)
+)engine=InnoDB default charset=utf8
+
+miaosha_order秒杀订单表
+create table if not exists miaosha_order(
+    id int not null unsigned auto_increment comment '秒杀订单id',
+    user_id int not null comment '用户id',   //用户id
+    goods_id int not null comment '商品id',  //商品id
+    order_id int not null comment '订单id',   //订单id
+    primary key (id)
+)engine=InnoDB default charset=utf8
+
+order_info订单信息
+create table if not exists order_id(
+    id int not null unsigned auto_increment comment '订单id',
+    user_id int not null comment '用户id',
+    goods_id int not null comment '商品id',
+    goods_name varchar(30) not null comment '商品名称',
+    goods_count int not null 0 comment '商品数量',
+    goods_price double not null 0 comment '商品价格',
+    order_channel varchar(20) not null comment '订单渠道',
+    status int not null 0 comment '订单状态',
+    create_date varchar(20) not null comment '订单创建日期',
+    primary key (id)
+)engine=InnoDB default charset=utf8
+
+miaosha_user
+
+miaosha_goods
+
+
+
